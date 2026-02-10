@@ -1,42 +1,49 @@
-# Pterodactyl Backup CLI
+# Pterodactyl Backup CLI 🚀
 
-A lightweight Python script to automate server backups via the Pterodactyl API.
+A simple but powerful CLI tool to automate server backups for your Pterodactyl panel. Perfect for daily cron jobs or one-off backups.
 
 ## Features
-- **Automated**: Automatically fetches all servers you have access to.
-- **Error Handling**: Skips offline or inaccessible servers gracefully.
-- **Configurable**: Uses environment variables for API credentials.
+
+- **Automated Backups:** Trigger backups for all accessible servers with a single command.
+- **Easy Setup:** Uses a simple `.env` file for configuration.
+- **Error Handling:** Graceful error messages if something goes wrong.
+
+## Requirements
+
+- Python 3.8+
+- Pterodactyl Panel API Key (Client API)
 
 ## Installation
 
-1. Clone this repository:
-```bash
-git clone https://github.com/mcuabhi17-lab/ptero-backup-cli.git
-cd ptero-backup-cli
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mcuabhi17-lab/ptero-backup-cli.git
+   cd ptero-backup-cli
+   ```
 
 2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Create a `.env` file:
+   ```env
+   PTERO_PANEL_URL=https://your-panel.com
+   PTERO_API_KEY=ptlc_YOUR_API_KEY
+   ```
 
 ## Usage
 
-1. Set your environment variables:
-```bash
-export PTERO_API_URL="https://your-pterodactyl-panel.com"
-export PTERO_API_KEY="ptlc_your_client_api_key_here"
-```
+Run the script:
 
-2. Run the script:
 ```bash
-python main.py
+python backup.py
 ```
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Feel free to open issues or pull requests if you want to add features like specific server targeting or custom backup names!
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+MIT License
